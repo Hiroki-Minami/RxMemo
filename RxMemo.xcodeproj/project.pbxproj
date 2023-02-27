@@ -24,6 +24,10 @@
 		94E99AB129AD631E003A4046 /* ViewModelBindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99AB029AD631E003A4046 /* ViewModelBindableType.swift */; };
 		94E99AB329AD6801003A4046 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99AB229AD6801003A4046 /* MemoStorageType.swift */; };
 		94E99AB729AD68DA003A4046 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99AB629AD68DA003A4046 /* MemoryStorage.swift */; };
+		94E99AB929AD7079003A4046 /* TransitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99AB829AD7079003A4046 /* TransitionModel.swift */; };
+		94E99ABB29AD711B003A4046 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99ABA29AD711B003A4046 /* Scene.swift */; };
+		94E99ABD29AD745C003A4046 /* SceneCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99ABC29AD745C003A4046 /* SceneCoordinatorType.swift */; };
+		94E99ABF29AD756F003A4046 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E99ABE29AD756F003A4046 /* SceneCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		94E99AB029AD631E003A4046 /* ViewModelBindableType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindableType.swift; sourceTree = "<group>"; };
 		94E99AB229AD6801003A4046 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
 		94E99AB629AD68DA003A4046 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		94E99AB829AD7079003A4046 /* TransitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModel.swift; sourceTree = "<group>"; };
+		94E99ABA29AD711B003A4046 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		94E99ABC29AD745C003A4046 /* SceneCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinatorType.swift; sourceTree = "<group>"; };
+		94E99ABE29AD756F003A4046 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		B9A7029848DB5B877D87F417 /* Pods_RxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +125,10 @@
 		94E99A9B29AD5C64003A4046 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				94E99AB829AD7079003A4046 /* TransitionModel.swift */,
+				94E99ABA29AD711B003A4046 /* Scene.swift */,
+				94E99ABC29AD745C003A4046 /* SceneCoordinatorType.swift */,
+				94E99ABE29AD756F003A4046 /* SceneCoordinator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -294,14 +306,18 @@
 			files = (
 				94E99AA529AD6200003A4046 /* MemoDetailViewController.swift in Sources */,
 				94E99AAD29AD6295003A4046 /* MemoComposeViewModel.swift in Sources */,
+				94E99ABF29AD756F003A4046 /* SceneCoordinator.swift in Sources */,
+				94E99ABB29AD711B003A4046 /* Scene.swift in Sources */,
 				94E99AAB29AD6286003A4046 /* MemoDetailViewModel.swift in Sources */,
 				94E99AB729AD68DA003A4046 /* MemoryStorage.swift in Sources */,
 				94E99AA729AD620C003A4046 /* MemoComposeViewController.swift in Sources */,
 				94E99AA329AD61F2003A4046 /* MemoListViewController.swift in Sources */,
 				94E99A8529AD5B2E003A4046 /* AppDelegate.swift in Sources */,
 				94E99AB129AD631E003A4046 /* ViewModelBindableType.swift in Sources */,
+				94E99ABD29AD745C003A4046 /* SceneCoordinatorType.swift in Sources */,
 				94E99A8729AD5B2E003A4046 /* SceneDelegate.swift in Sources */,
 				94E99AA929AD627C003A4046 /* MemoListViewModel.swift in Sources */,
+				94E99AB929AD7079003A4046 /* TransitionModel.swift in Sources */,
 				94E99AB329AD6801003A4046 /* MemoStorageType.swift in Sources */,
 				94E99A8F29AD5B2E003A4046 /* RxMemo.xcdatamodeld in Sources */,
 				94E99AAF29AD62B1003A4046 /* Memo.swift in Sources */,

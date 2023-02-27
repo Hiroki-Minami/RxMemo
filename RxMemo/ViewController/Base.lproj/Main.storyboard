@@ -26,7 +26,7 @@
         <!--Memo Detail View Controller-->
         <scene sceneID="0Mh-rD-l6h">
             <objects>
-                <viewController id="QwA-wN-RO3" customClass="MemoDetailViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="QwA-wN-RO3" customClass="MemoDetailViewController" customModule="RxMemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2gq-cL-wua">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ozT-cX-LqO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pf2-KD-33k" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ListNav" automaticallyAdjustsScrollViewInsets="NO" id="Pf2-KD-33k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="6aQ-Lh-Kp5">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
@@ -100,7 +100,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gRg-3y-EXm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OBy-mQ-9PZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ComposeNav" automaticallyAdjustsScrollViewInsets="NO" id="OBy-mQ-9PZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tbT-Oo-2rD">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
