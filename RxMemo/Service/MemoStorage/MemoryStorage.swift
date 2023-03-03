@@ -14,7 +14,6 @@ class MemoryStorage: MemoStorageType {
     Memo(content: "Hello RxSwift", insertDate: Date().addingTimeInterval(-20))
   ]
   
-  // subject (observer, observable), publishSubject(no initial value), BehaviourSubject(with a value)
   private lazy var store = BehaviorSubject<[Memo]>(value: memos)
   
   func createMemo(content: String) -> RxSwift.Observable<Memo> {

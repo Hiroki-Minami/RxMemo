@@ -13,38 +13,37 @@ class ScenCoordinator: SceneCoordinatorType {
   private let bag = DisposeBag()
   
   private var window: UIWindow
-  private var currentVC: UIViewController {
-    didSet {
-      window.rootViewController = currentVC
-    }
-  }
+  private var currentVC: UIViewController
   
   required init(window: UIWindow) {
     self.window = window
     self.currentVC = window.rootViewController!
   }
   
+  @discardableResult
   func transition(to scene: Scene, using style: TransitionStyle, animated: Bool) -> Completable {
     let subject = PublishSubject<Void>()
     let target = scene.instanciate()
     
     switch style {
     case .root:
-      currentVC = target
+      currentVC = target.sceneViewContoller
+      window.rootViewController = target
       subject.onCompleted()
     case .push:
+      print(currentVC)
       guard let nav = currentVC.navigationController else {
         subject.onError(TransitionError.navigationControllerMissing)
         break
       }
       nav.pushViewController(target, animated: animated)
-      currentVC = target
+      currentVC = target.sceneViewContoller
       subject.onCompleted()
     case .modal:
       currentVC.present(target, animated: animated) {
         subject.onCompleted()
       }
-      self.currentVC = target
+      currentVC = target.sceneViewContoller
     }
     return subject.ignoreElements().asCompletable()
   }
@@ -53,7 +52,7 @@ class ScenCoordinator: SceneCoordinatorType {
     return Completable.create { [unowned self] completable in
       if let presentingVC = self.currentVC.presentingViewController {
         self.currentVC.dismiss(animated: animated) {
-          self.currentVC = presentingVC
+          self.currentVC = presentingVC.sceneViewContoller
           completable(.completed)
         }
       } else if let nav = self.currentVC.navigationController {
@@ -69,6 +68,10 @@ class ScenCoordinator: SceneCoordinatorType {
       return Disposables.create()
     }
   }
-  
-  
+}
+
+extension UIViewController {
+  var sceneViewContoller: UIViewController {
+    return self.children.first ?? self
+  }
 }
