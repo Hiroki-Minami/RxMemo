@@ -43,7 +43,8 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
           return cell
         case 1:
           let cell = tableView.dequeueReusableCell(withIdentifier: "DateCell")!
-          cell.textLabel?.text = value.insertDate.formatted()
+//          cell.textLabel?.text = value.insertDate.formatted()
+          cell.textLabel?.text = value.insertDate!.formatted()
           return cell
         default:
           fatalError("Table View error")

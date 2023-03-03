@@ -18,7 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let _ = (scene as? UIWindowScene) else { return }
     
     let sceneCoordinator = ScenCoordinator(window: window!)
-    let storage = MemoryStorage()
+//    let storage = MemoryStorage()
+    let storage = CoreStorage()
+    // MARK: change storage to core data
     
     let listViewModel = MemoListViewModel(title: "My memo", sceneCoordinater: sceneCoordinator, storage: storage)
     let memoListScene = Scene.list(listViewModel)
